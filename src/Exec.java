@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Locale;
 import entities.Person;
-import servicerules.Calculator;
+import services.Calculator;
 import uinterface.InterfaceUsuario;
 
 public class Exec {

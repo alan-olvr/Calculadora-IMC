@@ -1,4 +1,4 @@
-package servicerules;
+package services;
 import entities.Person;
 import java.lang.Math;
 
