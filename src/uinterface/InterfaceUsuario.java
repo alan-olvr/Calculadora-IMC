@@ -1,6 +1,6 @@
 package uinterface;
 
-// essa é a classe responsável pelas interações do usuário ao menu - uma espécie de main2
+// essa é a classe responsável pelas interações do usuário ao menu
 
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
