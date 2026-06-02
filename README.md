@@ -27,8 +27,8 @@
 
 ### Pré-requisitos
 
-- Java 17+ Instalado
-- 
+- Java 17+ Instalado.
+
 ### Instalação
 
 ```bash
@@ -44,12 +44,12 @@ java -cp out Exec
 IMC-Calc/
 ├── src/
 │   ├── entities/
-│   │   └── Person.java              # Modelo de dados do usuário
+│   │   └── Person.java              -> Modelo de dados do usuário
 │   ├── services/
-│   │   └── Calculator.java          # Regras de negócio e cálculos
+│   │   └── Calculator.java          -> Regras de negócio e cálculos
 │   ├── uinterface/
-│   │   └── InterfaceUsuario.java    # Interface e interações com o usuário
-│   └── Exec.java                    # Ponto de entrada da aplicação
+│   │   └── InterfaceUsuario.java    -> Interface e interações com o usuário
+│   └── Exec.java                    -> Ponto de entrada da aplicação
 ```
 
 | Camada | Arquivo | Responsabilidade |
@@ -91,11 +91,11 @@ IMC-Calc/
 
 ### Estruturas de Controle
 
-- `do-while` — loop principal do menu, garante ao menos uma execução
-- `while` — revalidação de entradas e ciclo de novos cálculos
-- `switch-case` — despacho das opções do menu
-- `if-else` — classificação do IMC nas 6 faixas clínicas
-- `enhanced for` — iteração sobre o histórico de consultas
+- `do-while` — loop principal do menu, garante ao menos uma execução.
+- `while` — revalidação de entradas e ciclo de novos cálculos.
+- `switch-case` — despacho das opções do menu.
+- `if-else` — classificação do IMC nas 6 faixas clínicas.
+- `enhanced for` — iteração sobre o histórico de consultas.
 
 ---
 
