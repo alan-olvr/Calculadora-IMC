@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resultado — IMC Calc</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div th:replace="~{fragments/nav :: nav('calcular')}"></div>
+
+<div class="page">
+    <header class="page-header">
+        <p class="eyebrow">Resultado da consulta</p>
+        <h1 class="page-title">Seu IMC</h1>
+    </header>
+
+    <div class="card">
+        <p class="result-name" th:text="${person.nome}">Nome</p>
+
+        <div class="imc-value-row">
+            <span class="imc-value" th:text="${imcFormatado}">0.0</span>
+            <span class="badge" th:classappend="${person.statusCssClass}" th:text="${person.classificacao}">Classificação</span>
+        </div>
+
+        <!-- Régua de IMC: mostra visualmente onde o valor cai na escala -->
+        <div class="gauge">
+            <div class="gauge-track">
+                <div class="gauge-segment status-abaixo" style="width:24.29%"></div>
+                <div class="gauge-segment status-normal" style="width:18.57%"></div>
+                <div class="gauge-segment status-sobrepeso" style="width:14.29%"></div>
+                <div class="gauge-segment status-obesidade-1" style="width:14.29%"></div>
+                <div class="gauge-segment status-obesidade-2" style="width:14.29%"></div>
+                <div class="gauge-segment status-obesidade-3" style="width:14.28%"></div>
+                <div class="gauge-pointer" th:attr="data-label=${imcFormatado}" th:style="'left:' + ${gaugePercent} + '%'"></div>
+            </div>
+            <div class="gauge-labels">
+                <span>10</span><span>18.5</span><span>25</span><span>30</span><span>35</span><span>40</span><span>45+</span>
+            </div>
+        </div>
+
+        <p class="result-message" th:text="${mensagem}">Mensagem</p>
+
+        <a href="/" class="btn btn-outline">Calcular novamente</a>
+    </div>
+</div>
+
+</body>
+</html>

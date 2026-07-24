@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabela de referência — IMC Calc</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div th:replace="~{fragments/nav :: nav('tabela')}"></div>
+
+<div class="page">
+    <header class="page-header">
+        <p class="eyebrow">Padrão OMS</p>
+        <h1 class="page-title">Tabela de referência</h1>
+        <p class="page-subtitle">Faixas oficiais de classificação do Índice de Massa Corporal para adultos.</p>
+    </header>
+
+    <div class="card">
+        <div class="ref-list">
+            <div class="ref-row" th:classappend="${f.cssClass}" th:each="f : ${faixas}">
+                <span class="ref-faixa" th:text="${f.faixa}">18.5 – 24.9</span>
+                <span class="badge" th:classappend="${f.cssClass}" th:text="${f.classificacao}">Classificação</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

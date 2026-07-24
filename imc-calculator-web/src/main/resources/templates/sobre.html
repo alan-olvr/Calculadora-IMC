@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sobre — IMC Calc</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div th:replace="~{fragments/nav :: nav('sobre')}"></div>
+
+<div class="page">
+    <header class="page-header">
+        <p class="eyebrow">Sobre o sistema</p>
+        <h1 class="page-title">IMC Calc</h1>
+        <span class="version-tag">versão 2.0 · interface web</span>
+    </header>
+
+    <div class="card">
+        <div class="about-block">
+            <h3>O que é</h3>
+            <p>
+                IMC Calc é uma aplicação desenvolvida em Java com o objetivo
+                de realizar o cálculo do Índice de Massa Corporal (IMC),
+                fornecendo ao usuário uma classificação baseada nos padrões
+                de referência estabelecidos pela Organização Mundial da Saúde.
+            </p>
+        </div>
+
+        <div class="about-block">
+            <h3>Propósito do projeto</h3>
+            <p>
+                Além da funcionalidade prática, o projeto é uma iniciativa de estudo voltada ao
+                fortalecimento dos fundamentos da linguagem Java e à consolidação de conceitos
+                essenciais do desenvolvimento backend, incluindo:
+            </p>
+            <ul>
+                <li>Programação Orientada a Objetos (POO)</li>
+                <li>Estruturas condicionais e de repetição</li>
+                <li>Organização em camadas (entidades, serviços, controller)</li>
+                <li>Manipulação e validação de entrada de dados</li>
+                <li>Encapsulamento e separação de responsabilidades</li>
+                <li>Construção de interface web com Spring Boot e Thymeleaf</li>
+            </ul>
+        </div>
+
+        <div class="about-block">
+            <h3>Histórico do projeto</h3>
+            <p>
+                Iniciado como uma aplicação de console em Java puro, evoluiu para uma interface
+                web construída com Spring Boot, mantendo a mesma lógica de cálculo e classificação
+                do IMC na camada de serviço.
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

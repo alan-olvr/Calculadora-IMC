@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<nav th:fragment="nav(active)" class="navbar">
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">IMC<span>Calc</span></a>
+        <ul class="nav-links">
+            <li><a href="/" th:classappend="${active == 'calcular'} ? 'active'">Calcular IMC</a></li>
+            <li><a href="/tabela" th:classappend="${active == 'tabela'} ? 'active'">Tabela de referência</a></li>
+            <li><a href="/historico" th:classappend="${active == 'historico'} ? 'active'">Histórico</a></li>
+            <li><a href="/sobre" th:classappend="${active == 'sobre'} ? 'active'">Sobre</a></li>
+        </ul>
+    </div>
+</nav>
+</body>
+</html>

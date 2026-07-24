@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Histórico — IMC Calc</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div th:replace="~{fragments/nav :: nav('historico')}"></div>
+
+<div class="page">
+    <header class="page-header">
+        <p class="eyebrow">Consultas anteriores</p>
+        <h1 class="page-title">Histórico</h1>
+        <p class="page-subtitle">Todas as consultas calculadas nesta sessão da aplicação, mais recentes primeiro.</p>
+    </header>
+
+    <div class="card">
+        <div th:if="${!consultas.isEmpty()}">
+            <div class="history-toolbar">
+                <form action="/historico/limpar" method="post" onsubmit="return confirm('Limpar todo o histórico de consultas?');">
+                    <button type="submit" class="btn btn-danger" style="width:auto; padding: 8px 14px; font-size: 0.82rem;">Limpar histórico</button>
+                </form>
+            </div>
+
+            <div class="history-list">
+                <div class="history-item" th:each="p : ${consultas}">
+                    <p class="history-name" th:text="${p.nome}">Nome</p>
+                    <div>
+                        <p class="history-imc" th:text="${#numbers.formatDecimal(p.imc,1,1)}">0.0</p>
+                        <span class="badge" th:classappend="${p.statusCssClass}" th:text="${p.classificacao}">Classificação</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="empty-state" th:if="${consultas.isEmpty()}">
+            <div class="empty-icon">—</div>
+            <p>Nenhuma consulta registrada ainda.</p>
+            <a href="/" class="btn btn-outline" style="width:auto; display:inline-flex; padding: 10px 18px; margin-top: 8px;">Calcular meu IMC</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
