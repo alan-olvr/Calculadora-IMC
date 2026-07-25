@@ -9,10 +9,12 @@
 > O IMC Calc foi desenvolvido como um projeto de estudo voltado à consolidação dos fundamentos da linguagem Java e das boas práticas de desenvolvimento backend.
 > Na versão 2.0, o projeto evoluiu para uma aplicação web com **Spring Boot**, **Thymeleaf**, **HTML** e **CSS**, mantendo a lógica de negócio original e adicionando uma interface navegável no navegador para calcular o IMC, visualizar a tabela de referência oficial, acompanhar o histórico de consultas da sessão e receber mensagens personalizadas com recomendações de saúde.
 
-## 📸 Preview
-![preview](./assets/prev1.png)
-![preview](./assets/prev2.png)
-![preview](./assets/prev3.png)
+## 📸 Previews
+![preview](./assets/prev4(2).png)
+![preview](./assets/prev5.png)
+![preview](./assets/prev6.png)
+![preview](./assets/prev7.png)
+
 
 ## ✅ Funcionalidades
 
@@ -142,6 +144,11 @@ Separação em camadas seguindo o padrão **MVC**, com o princípio de **Separa�
 ## 📜 Versão Original (Console)
 
 A primeira versão do projeto foi desenvolvida em **Java puro**, sem framework, com interação via terminal usando `Scanner`, `do-while` para o menu principal e `switch-case` para navegação. A lógica de cálculo e classificação do IMC (`Calculator`, `Person`) foi reaproveitada como base para a versão web atual.
+
+## 📸 Previews (console)
+![preview](./assets/prev1.png)
+![preview](./assets/prev2.png)
+![preview](./assets/prev3.png)
 
 O código dessa versão permanece na raiz deste repositório, na pasta `src/`.
 
