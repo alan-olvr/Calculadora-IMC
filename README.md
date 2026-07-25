@@ -10,7 +10,7 @@
 > Na versão 2.0, o projeto evoluiu para uma aplicação web com **Spring Boot**, **Thymeleaf**, **HTML** e **CSS**, mantendo a lógica de negócio original e adicionando uma interface navegável no navegador para calcular o IMC, visualizar a tabela de referência oficial, acompanhar o histórico de consultas da sessão e receber mensagens personalizadas com recomendações de saúde.
 
 ## 📸 Previews
-![preview](./assets/prev4(2).png)
+![preview](./assets/prev4.png)
 ![preview](./assets/prev5.png)
 ![preview](./assets/prev6.png)
 ![preview](./assets/prev7.png)
